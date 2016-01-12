@@ -1,4 +1,4 @@
-package com.czeczotka.running.conversion
+package com.czeczotka.conversion.running
 
 import scala.util.{Success, Failure, Try}
 

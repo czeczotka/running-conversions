@@ -1,6 +1,6 @@
-package com.czeczotka.running.conversion
+package com.czeczotka.conversion.running
 
-import com.czeczotka.running.conversion.Pace.string2pace
+import com.czeczotka.conversion.running.Pace.string2pace
 import org.specs2.mutable.Specification
 
 class PaceSpec extends Specification {
