@@ -1,22 +1,27 @@
 package com.czeczotka.running.conversion
 
+import scala.util.{Success, Failure, Try}
+
 
 case class Pace(min: Int, sec: Int)
 
 
 object Pace {
 
-  implicit def string2pace(str: String): Pace = {
-    str.indexOf(':') match {
-      case colon if colon < 1 => throw new IllegalArgumentException(s"Could not convert string '$str' to pace")
-      case colon =>
-        val secString = str.substring(colon + 1, str.length)
-        val sec = secString.length match {
-          case 0 => 0
-          case _ => secString.toInt
-        }
-        val min = str.substring(0, colon).toInt
-        Pace(min, sec)
-    }
+  implicit def string2pace(str: String): Pace = str.split(':') match {
+    case Array(m, s) =>
+      Try {
+        (m.toInt, s.toInt)
+      } match {
+        case Failure(ex) => exception(str)
+        case Success((min, sec)) =>
+          if (min >= 0 && min < 60 && sec >= 0 && sec < 60 && (min > 0 || sec > 0)) Pace(min.toInt, sec.toInt)
+          else exception(str)
+      }
+    case _ => exception(str)
   }
+
+  private def exception(s: String) =
+    throw new IllegalArgumentException(s"Could not convert string '$s' to pace. Please provide pace in the 'mm:ss' format with values from 00:01 to 59:59.")
+
 }
