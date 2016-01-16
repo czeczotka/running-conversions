@@ -3,7 +3,13 @@ package com.czeczotka.conversion.running
 import scala.util.{Success, Failure, Try}
 
 
-case class Pace(min: Int, sec: Int)
+case class Pace(min: Int, sec: Int) {
+
+  override def toString = "%dm%02ds".format(min, sec)
+
+  def inSeconds = 60 * min + sec
+
+}
 
 
 object Pace {

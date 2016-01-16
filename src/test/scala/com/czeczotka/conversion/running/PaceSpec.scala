@@ -5,7 +5,7 @@ import org.specs2.mutable.Specification
 
 class PaceSpec extends Specification {
 
-  "Pace object" should {
+  "Pace.string2pace" should {
 
     "convert a String with a colon to a Pace object" in {
       string2pace("3:35")   mustEqual Pace(3, 35)
@@ -30,6 +30,18 @@ class PaceSpec extends Specification {
       string2pace("00:00") must throwA[IllegalArgumentException](errorMessage("00:00"))
       string2pace("60:00") must throwA[IllegalArgumentException](errorMessage("60:00"))
       string2pace("65:55") must throwA[IllegalArgumentException](errorMessage("65:55"))
+    }
+  }
+
+  "Pace.toString" should {
+
+    "return a String representing the pace" in {
+      Pace(6, 12).toString mustEqual "6m12s"
+      Pace(5, 50).toString mustEqual "5m50s"
+    }
+
+    "format single digit seconds with a leading zero" in {
+      Pace(5, 5).toString mustEqual "5m05s"
     }
   }
 }
