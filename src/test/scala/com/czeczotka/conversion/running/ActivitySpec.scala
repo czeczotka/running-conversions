@@ -14,6 +14,8 @@ class ActivitySpec extends Specification {
       Activity("4:30", metres800).totalTime mustEqual "3m36s"
       Activity("4:30", kilometres(0)).totalTime mustEqual "0m00s"
       Activity("4:30", miles(3)).totalTime mustEqual "21m43s"
+      Activity("5:20", halfMarathon).totalTime mustEqual "1h52m31s"
+      Activity("5:25", marathon).totalTime mustEqual "3h48m33s"
     }
   }
 }

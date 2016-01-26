@@ -1,5 +1,6 @@
 package com.czeczotka.conversion.running
 
+import scala.language.implicitConversions
 import scala.util.{Success, Failure, Try}
 
 
