@@ -6,7 +6,7 @@ import scala.util.{Success, Failure, Try}
 
 case class Pace(min: Int, sec: Int) {
 
-  override def toString = "%dm%02ds".format(min, sec)
+  override def toString = "%d:%02d".format(min, sec)
 
   def inSeconds = 60 * min + sec
 

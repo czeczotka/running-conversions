@@ -36,12 +36,12 @@ class PaceSpec extends Specification {
   "Pace.toString" should {
 
     "return a String representing the pace" in {
-      Pace(6, 12).toString mustEqual "6m12s"
-      Pace(5, 50).toString mustEqual "5m50s"
+      Pace(6, 12).toString mustEqual "6:12"
+      Pace(5, 50).toString mustEqual "5:50"
     }
 
     "format single digit seconds with a leading zero" in {
-      Pace(5, 5).toString mustEqual "5m05s"
+      Pace(5, 5).toString mustEqual "5:05"
     }
   }
 }
