@@ -12,6 +12,9 @@ case class Time(hours: Int = 0, minutes: Int, seconds: Int) {
     }
     case _ => "%dh%02dm%02ds".format(hours, minutes, seconds)
   }
+
+  def toSeconds = hours * 3600 + minutes * 60 + seconds
+
 }
 
 

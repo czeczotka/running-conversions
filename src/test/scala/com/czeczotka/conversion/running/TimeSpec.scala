@@ -34,4 +34,13 @@ class TimeSpec extends Specification {
       string2time("hms")           must throwA[IllegalArgumentException](errorMessage("hms"))
     }
   }
+
+  "Time.toSeconds" should {
+    "return number of seconds" in {
+      Time(0, 0, 1).toSeconds mustEqual 1
+      Time(0, 1, 1).toSeconds mustEqual 61
+      Time(1, 1, 1).toSeconds mustEqual 3661
+      Time(3, 51, 59).toSeconds mustEqual 13919
+    }
+  }
 }
