@@ -19,7 +19,7 @@ class PaceSpec extends Specification {
     }
 
     "not convert an invalid String" in {
-      def errorMessage(s: String) = s"Could not convert string '$s' to pace. Please provide pace in the 'mm:ss' format with values from 00:01 to 59:59."
+      def errorMessage(s: String) = s"Could not convert string '$s' to pace. Please provide the pace in the 'mm:ss' format with values from 00:01 to 59:59."
       string2pace("")      must throwA[IllegalArgumentException](errorMessage(""))
       string2pace("000")   must throwA[IllegalArgumentException](errorMessage("000"))
       string2pace("335")   must throwA[IllegalArgumentException](errorMessage("335"))

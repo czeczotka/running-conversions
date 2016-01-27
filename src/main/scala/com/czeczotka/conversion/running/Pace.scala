@@ -29,6 +29,7 @@ object Pace {
   }
 
   private def exception(s: String) =
-    throw new IllegalArgumentException(s"Could not convert string '$s' to pace. Please provide pace in the 'mm:ss' format with values from 00:01 to 59:59.")
+    throw new IllegalArgumentException(
+      s"Could not convert string '$s' to pace. Please provide the pace in the 'mm:ss' format with values from 00:01 to 59:59.")
 
 }
