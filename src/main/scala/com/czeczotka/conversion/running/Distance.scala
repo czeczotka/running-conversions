@@ -2,6 +2,11 @@ package com.czeczotka.conversion.running
 
 case class Distance(metres: Int) {
   def at(pace: Pace): Activity = Activity(pace, this)
+
+  def in(time: Time): Pace = {
+    val paceInSeconds = time.toSeconds / (metres / 1000.0)
+    Pace((paceInSeconds / 60).toInt, (paceInSeconds % 60).toInt)
+  }
 }
 
 object Distance {
