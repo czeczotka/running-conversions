@@ -26,4 +26,12 @@ class DistanceSpec extends Specification {
       marathon in "4h00m"          mustEqual Pace(5, 41)
     }
   }
+
+  "Distance.kilometres" should {
+    "calculate distance in kilometres" in {
+      metres400.kilometres     mustEqual 0.4
+      metres1000.kilometres    mustEqual 1.0
+      halfMarathon.kilometres  mustEqual 21.097
+    }
+  }
 }

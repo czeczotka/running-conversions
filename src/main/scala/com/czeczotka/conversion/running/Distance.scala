@@ -1,6 +1,9 @@
 package com.czeczotka.conversion.running
 
 case class Distance(metres: Int) {
+
+  def kilometres  = metres / 1000.0
+
   def at(pace: Pace): Activity = Activity(pace, this)
 
   def in(time: Time): Pace = {
