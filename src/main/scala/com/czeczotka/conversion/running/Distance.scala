@@ -6,9 +6,10 @@ case class Distance(metres: Int) {
 
   def at(pace: Pace): Activity = Activity(pace, this)
 
-  def in(time: Time): Pace = {
+  def in(time: Time): Activity = {
     val paceInSeconds = time.toSeconds / (metres / 1000.0)
-    Pace((paceInSeconds / 60).toInt, (paceInSeconds % 60).toInt)
+    val pace = Pace((paceInSeconds / 60).toInt, (paceInSeconds % 60).toInt)
+    Activity(pace, this)
   }
 }
 

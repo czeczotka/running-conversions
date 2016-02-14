@@ -13,17 +13,18 @@ class DistanceSpec extends Specification {
   }
 
   "Distance.in(time)" should {
-    "create a corresponding Pace" in {
-      metres400 in "1m42s"         mustEqual Pace(4, 15)
-      k10 in "49m59s"              mustEqual Pace(4, 59)
-      k10 in "50m00s"              mustEqual Pace(5, 0)
-      k10 in "50m09s"              mustEqual Pace(5, 0)
-      k10 in "50m10s"              mustEqual Pace(5, 1)
-      halfMarathon in "1h47m12s"   mustEqual Pace(5, 4)
-      halfMarathon in "1h47m15s"   mustEqual Pace(5, 5)
-      halfMarathon in "2h15m22s"   mustEqual Pace(6, 24)
-      halfMarathon in "2h15m23s"   mustEqual Pace(6, 25)
-      marathon in "4h00m"          mustEqual Pace(5, 41)
+    "create a corresponding activity" in {
+      metres400 in "1m42s"         mustEqual Activity(Pace(4, 15), metres400)
+      k10 in "49m59s"              mustEqual Activity(Pace(4, 59), k10)
+      k10 in "50m00s"              mustEqual Activity(Pace(5, 0), k10)
+      k10 in "50m09s"              mustEqual Activity(Pace(5, 0), k10)
+      k10 in "50m10s"              mustEqual Activity(Pace(5, 1), k10)
+      halfMarathon in "1h47m12s"   mustEqual Activity(Pace(5, 4), halfMarathon)
+      halfMarathon in "1h47m15s"   mustEqual Activity(Pace(5, 5), halfMarathon)
+      halfMarathon in "2h15m22s"   mustEqual Activity(Pace(6, 24), halfMarathon)
+      halfMarathon in "2h15m23s"   mustEqual Activity(Pace(6, 25), halfMarathon)
+      marathon in "4h00m"          mustEqual Activity(Pace(5, 41), marathon)
+      (marathon in "4h00m" pace)   mustEqual Pace(5, 41)
     }
   }
 
