@@ -5,17 +5,17 @@ import org.specs2.mutable.Specification
 
 class ActivitySpec extends Specification {
 
-  "Activity.totalTime" should {
-    "calculate the total time of the activity" in {
-      Activity(Pace(5, 0), Distance(5000)).totalTime  mustEqual "25m00s"
-      Activity("5:00", k1).totalTime                  mustEqual "5m00s"
-      Activity("5:15", metres400).totalTime           mustEqual "2m06s"
-      Activity("5:15", k10).totalTime                 mustEqual "52m30s"
-      Activity("4:30", metres800).totalTime           mustEqual "3m36s"
-      Activity("4:30", kilometres(0)).totalTime       mustEqual "0m00s"
-      Activity("4:30", miles(3)).totalTime            mustEqual "21m43s"
-      Activity("5:20", halfMarathon).totalTime        mustEqual "1h52m31s"
-      Activity("5:25", marathon).totalTime            mustEqual "3h48m33s"
+  "Activity.time" should {
+    "calculate the time of the activity" in {
+      Activity(Pace(5, 0), Distance(5000)).time  mustEqual Time(0, 25, 0)
+      Activity("5:00", k1).time                  mustEqual Time(0, 5, 0)
+      Activity("5:15", metres400).time           mustEqual Time(0, 2, 6)
+      Activity("5:15", k10).time                 mustEqual Time(0, 52, 30)
+      Activity("4:30", metres800).time           mustEqual Time(0, 3, 36)
+      Activity("4:30", kilometres(0)).time       mustEqual Time(0, 0, 0)
+      Activity("4:30", miles(3)).time            mustEqual Time(0, 21, 43)
+      Activity("5:20", halfMarathon).time        mustEqual Time(1, 52, 31)
+      Activity("5:25", marathon).time            mustEqual Time(3, 48, 33)
     }
   }
 
