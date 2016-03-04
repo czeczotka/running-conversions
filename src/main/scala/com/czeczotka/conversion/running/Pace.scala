@@ -15,6 +15,8 @@ case class Pace(min: Int, sec: Int) {
 
 object Pace {
 
+  val zeroTo59 = 0 to 59
+
   implicit def string2pace(str: String): Pace = str.split(':') match {
     case Array(m, s) =>
       Try {
@@ -22,7 +24,7 @@ object Pace {
       } match {
         case Failure(ex) => exception(str)
         case Success((min, sec)) =>
-          if (min >= 0 && min < 60 && sec >= 0 && sec < 60 && (min > 0 || sec > 0)) Pace(min.toInt, sec.toInt)
+          if (zeroTo59.contains(min) && zeroTo59.contains(sec) && (min > 0 || sec > 0)) Pace(min, sec)
           else exception(str)
       }
     case _ => exception(str)
