@@ -25,6 +25,7 @@ object Distance {
   val k1 =            Distance(1000)
   val k5 =            Distance(5000)
   val k10 =           Distance(10000)
+  val mile1 =         Distance(1609)
   val miles10 =       Distance(16093)
   val halfMarathon =  Distance(21097)
   val marathon =      Distance(42195)
