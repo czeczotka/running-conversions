@@ -12,6 +12,19 @@
 input:  marathon at "5:41" time 
 output: 3h59m48s
 ```
+```
+input:  metres400 at "4:15" time 
+output: 1m42s
+```
+ * for a given distance and time calculate the pace
+```
+input:  k10 in "49m00s" pace 
+output: 4:54
+```
+```
+input:  metres800 in "3m28s" pace 
+output: 4:20
+```
 
 ### predefined distances
 See the `com.czeczotka.conversion.running.Distance` object for the full list:
