@@ -48,4 +48,4 @@ See the `com.czeczotka.conversion.running.Distance` object for the full list:
 ### input and output conventions
  * at the moment only metric system is supported 
  * pace is in m/km written as `<minutes>:<seconds>`, i.e.: `5:15` is 5 min and 15 sec.
- * time is written as `<hours>h:<minutes>m:<seconds>s` or `<hours>h:<minutes>m` or `<minutes>m:<seconds>s`, i.e: `1h10m15s`, `50m50s`, `2h59m`
+ * time is written as `<hours>h<minutes>m<seconds>s` or `<hours>h<minutes>m` or `<minutes>m<seconds>s`, i.e: `1h10m15s`, `50m50s`, `2h59m`
