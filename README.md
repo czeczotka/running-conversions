@@ -6,6 +6,13 @@
 
 ### how can I run it?
 
+// TODO
+
+### how can I use it?
+
+ * create an activity which would represent a distance over time or a distance at a pace 
+ * query the activity for details such as time, pace, distance or splits
+
 ### what does it do?
  * for a given distance and pace calculate the finish time
 ```
