@@ -77,7 +77,7 @@ output: Map(0.4 -> 1m36s, 0.8 -> 3m12s, 1.2 -> 4m48s, 1.6 -> 6m24s, 2.0 -> 8m00s
 
 ### input and output conventions
  * at the moment only metric system is supported 
- * pace is in minutes per km written as `<minutes>:<seconds>`, i.e.: `5:15` is 5 min and 15 sec.
+ * pace is written in minutes per kilometre `<minutes>:<seconds>`, i.e.: `5:15` is 1 kilometre run 5 min and 15 sec.
  * time is written as `<hours>h<minutes>m<seconds>s` or `<hours>h<minutes>m` or `<minutes>m<seconds>s`, i.e: `1h10m15s`, `50m50s`, `2h59m`
  * both infix and dot notations are supported
 ```
