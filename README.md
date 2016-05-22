@@ -32,12 +32,12 @@ output: 4:54
 input:  metres800 in "3m28s" pace 
 output: 4:20
 ```
- * create an activity and get the splits (every kilometre)
+ * get every kilometre splits for an activity
 ```
 input:  k10 in "44m30s"  splits
 output: Map(1.0 -> 4m27s, 2.0 -> 8m54s, 3.0 -> 13m21s, 4.0 -> 17m48s, 5.0 -> 22m15s, 6.0 -> 26m42s, 7.0 -> 31m09s, 8.0 -> 35m36s, 9.0 -> 40m03s, 10.0 -> 44m30s)
 ```
- * create an activity and get the splits with custom split point (i.e.: every 5k)
+ * get custom splits for an activity (i.e.: every 5k)
 ```
 // calculate 5k splits to run the marathon in 3 hours 45 minutes
 input:  marathon in "3h45m" splits k5
@@ -89,3 +89,14 @@ See the `com.czeczotka.conversion.running.Distance` object for the full list:
  * 10 miles (`mile10`)
  * half marathon (`halfMarathon`)
  * marathon (`marathon`)
+
+### custom distances
+You can create custom distances with these utility methods (metres, km, kilometres, miles):
+```
+input:  kilometres(12.5)
+output: Distance(12500)
+```
+```
+input:  miles(8)
+output: Distance(12874)
+```
