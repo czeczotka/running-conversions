@@ -20,7 +20,7 @@ import scala.language.postfixOps, com.czeczotka.conversion.running.Time._, com.c
 scala> k10 in "39m30s" pace
 res0: com.czeczotka.conversion.running.Pace = 3:57
 ```
- * alternatively you can edit and run `com.czeczotka.conversion.running.RunningConversions` object or use `running-conversions` in your own code
+ * alternatively you can edit and run `com.czeczotka.conversion.running.RunningConversions` object ([install sbt](http://www.scala-sbt.org/0.13/docs/Setup.html) and then `sbt run`) or use `running-conversions` in your own code
 
 ### how can I use it?
 
