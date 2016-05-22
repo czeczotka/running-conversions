@@ -1,7 +1,7 @@
 package com.czeczotka.conversion.running
 
 import org.specs2.mutable.Specification
-import com.czeczotka.conversion.running.Time.string2time
+import com.czeczotka.conversion.running.Time.{string2time, time}
 
 class TimeSpec extends Specification {
 
@@ -41,6 +41,13 @@ class TimeSpec extends Specification {
       Time(0, 1, 1).toSeconds mustEqual 61
       Time(1, 1, 1).toSeconds mustEqual 3661
       Time(3, 51, 59).toSeconds mustEqual 13919
+    }
+  }
+
+  "Time.time" should {
+    "create Time" in {
+      time(11, 12) mustEqual Time(0, 11, 12)
+      time(11, 12, 13) mustEqual Time(11, 12, 13)
     }
   }
 }

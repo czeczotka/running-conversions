@@ -36,4 +36,7 @@ object Time {
   private def exception(s: String) =
     throw new IllegalArgumentException(s"Could not convert string '$s' to time. Please provide the time in the 'XXhXXmXXs' format.")
 
+  def time(hours: Int, minutes: Int, seconds: Int) = Time(hours, minutes, seconds)
+  def time(minutes: Int, seconds: Int) = Time(0, minutes, seconds)
+
 }
