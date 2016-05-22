@@ -5,8 +5,22 @@
 `running-conversions` is a Scala library which enables some running-related calculations. As part of my preparations different races I have been following training programmes frequently ended up using good old pen and paper to calculate pace, time and distance. Therefore, I decided to have a pet project which would make these calculations easy while I could enjoy learning Scala.
 
 ### how can I run it?
-
-// TODO
+ * [Install Scala](http://www.scala-lang.org/download/install.html)
+ * download the running-conversions jar (`running-conversions_2.11-0.1.jar`)
+ * start REPL with the jar in the classpath 
+```
+scala -cp running-conversions_2.11-0.1.jar
+```
+ * import `postfixOps` and relevant objects
+```
+import scala.language.postfixOps, com.czeczotka.conversion.running.Time._, com.czeczotka.conversion.running.Distance._
+```
+ * use REPL, i.e:
+```
+scala> k10 in "39m30s" pace
+res0: com.czeczotka.conversion.running.Pace = 3:57
+```
+ * alternatively you can edit and run `com.czeczotka.conversion.running.RunningConversions` object or use `running-conversions` in your own code
 
 ### how can I use it?
 
