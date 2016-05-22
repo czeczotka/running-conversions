@@ -2,11 +2,11 @@
 
 ### what is it?
 
-`running-conversions` is a Scala library which enables some running-related calculations. As part of my preparations different races I have been following training programmes frequently ended up using good old pen and paper to calculate pace, time and distance. Therefore, I decided to have a pet project which would make these calculations easy while I could enjoy learning Scala.
+`running-conversions` is a Scala library which enables some running-related calculations. As part of my preparations for different races I have been following training programmes and frequently ended up using good old pen and paper to calculate pace, time and distance. Therefore, I decided to have a pet project which would make these calculations easy while I could enjoy learning Scala. Hope you will find it helpful.
 
 ### how can I run it?
- * [Install Scala](http://www.scala-lang.org/download/install.html)
- * download the running-conversions jar (`running-conversions_2.11-0.1.jar`)
+ * [Install Scala](http://www.scala-lang.org/download/install.html), you may also want to [install sbt](http://www.scala-sbt.org/0.13/docs/Setup.html)
+ * download the running-conversions jar (`running-conversions_2.11-0.1.jar`) or build it with `sbt package`
  * start REPL with the jar in the classpath 
 ```
 scala -cp running-conversions_2.11-0.1.jar
@@ -20,7 +20,7 @@ import scala.language.postfixOps, com.czeczotka.conversion.running.Time._, com.c
 scala> k10 in "39m30s" pace
 res0: com.czeczotka.conversion.running.Pace = 3:57
 ```
- * alternatively you can edit and run `com.czeczotka.conversion.running.RunningConversions` object ([install sbt](http://www.scala-sbt.org/0.13/docs/Setup.html) and then `sbt run`) or use `running-conversions` in your own code
+ * alternatively you can edit and run `com.czeczotka.conversion.running.RunningConversions` object (i.e. with  `sbt run`) or use `running-conversions` in your own code
 
 ### how can I use it?
 
