@@ -1,4 +1,4 @@
-# running-conversions
+# running-conversions [![Build Status](https://travis-ci.org/czeczotka/running-conversions.svg?branch=master)](https://travis-ci.org/czeczotka/running-conversions)
 
 ### what is it?
 
