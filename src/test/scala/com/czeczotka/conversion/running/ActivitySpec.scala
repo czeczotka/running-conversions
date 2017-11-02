@@ -21,7 +21,7 @@ class ActivitySpec extends Specification {
     }
   }
 
-  "Activity.splitsDouble" should {
+  "Activity.splits" should {
     "create splits for every kilometer" in {
       Activity("5:00", metres600).splits mustEqual Map()
       Activity("6:00", metres400).splits(Distance(100)) mustEqual SortedMap(0.1 -> "36s",  0.2 -> "1m12s", 0.3 -> "1m48s", 0.4 -> "2m24s")
