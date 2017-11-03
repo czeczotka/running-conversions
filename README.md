@@ -114,3 +114,10 @@ output: Distance(12500)
 input:  miles(8)
 output: Distance(12874)
 ```
+
+### race planner
+Given the start of the race this feature enables you to plan your splits and time of day when you're going to reach them.
+```
+input:  RacePlanner(halfMarathon in "1h45m", LocalTime.of(9,0)).splits(k5)
+output: Map(5.0 -> (24m50s,09:24:50), 10.0 -> (49m40s,09:49:40), 15.0 -> (1h14m30s,10:14:30), 20.0 -> (1h39m20s,10:39:20), 21.097 -> (1h44m46s,10:44:46))
+``` 
