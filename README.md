@@ -121,3 +121,13 @@ Given the start of the race this feature enables you to plan your splits and tim
 input:  RacePlanner(halfMarathon in "1h45m", LocalTime.of(9,0)).splits(k5)
 output: Map(5.0 -> (24m50s,09:24:50), 10.0 -> (49m40s,09:49:40), 15.0 -> (1h14m30s,10:14:30), 20.0 -> (1h39m20s,10:39:20), 21.097 -> (1h44m46s,10:44:46))
 ``` 
+You might choose to print it in separate lines:
+```
+input:  RacePlanner(halfMarathon in "1h45m", LocalTime.of(9,0)).splits(k5).foreach(println)
+output: 
+(5.0,(24m50s,09:24:50))
+(10.0,(49m40s,09:49:40))
+(15.0,(1h14m30s,10:14:30))
+(20.0,(1h39m20s,10:39:20))
+(21.097,(1h44m46s,10:44:46))
+```
